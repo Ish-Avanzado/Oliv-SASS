@@ -1,0 +1,21 @@
+@use "../abstract/" as *;
+
+.block {
+  &__title {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba($gray, $border-opacity);
+    margin-top: 4rem;
+  }
+
+  &__header {
+    @include flexBetween;
+    margin-bottom: 4rem;
+    h2 {
+        margin-bottom: 0;
+        font-size: 3rem;
+    }
+  }
+}

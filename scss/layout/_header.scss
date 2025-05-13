@@ -1,0 +1,21 @@
+@use "../abstract/" as *;
+
+.header {
+  &__wrapper {
+    @include flexBetween;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba($gray, $border-opacity);
+  }
+  &__branding {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    img {
+      @include imageCover(3rem, auto);
+    }
+  }
+  &__nav ul {
+    display: flex;
+    gap: 2rem;
+  }
+}

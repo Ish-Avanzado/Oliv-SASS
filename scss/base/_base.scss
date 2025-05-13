@@ -1,0 +1,9 @@
+@use "../abstract" as *;
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-family: "manrope-regular", sans-serif;
+  color: $dark;
+}
+
