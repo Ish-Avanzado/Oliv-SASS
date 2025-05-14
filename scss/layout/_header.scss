@@ -1,6 +1,12 @@
 @use "../abstract/" as *;
 
 .header {
+  @include mediaQuery($mobile) {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background: $light;
+  }
   &__wrapper {
     @include flexBetween;
     padding: 2rem 0;
@@ -14,8 +20,52 @@
       @include imageCover(3rem, auto);
     }
   }
-  &__nav ul {
-    display: flex;
-    gap: 2rem;
+  &__nav {
+    @include mediaQuery($mobile) {
+      position: absolute;
+      top: 6.5rem;
+      transition: all 0.5s ease-in-out;
+      right: -100rem;
+      background: $light;
+      width: 100%;
+      padding: 2rem;
+    }
+    ul {
+      display: flex;
+      gap: 2rem;
+      @include mediaQuery($mobile) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    ul li {
+      @include mediaQuery($mobile) {
+        border-bottom: 1px solid rgba($gray, $border-opacity);
+        padding: 0.6rem;
+      }
+    }
+    ul li:last-child {
+      @include mediaQuery($mobile) {
+        border-bottom: none;
+      }
+    }
+  }
+  &__nav.open {
+    @include mediaQuery($mobile) {
+      right: 0;
+      transition: all 0.5s ease-in-out;
+      z-index: 9;
+    }
+  }
+
+}
+
+.toggle_menu {
+  display: none;
+  @include mediaQuery($tablet) {
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
   }
 }

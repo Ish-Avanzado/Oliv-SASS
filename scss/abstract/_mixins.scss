@@ -23,7 +23,7 @@
   align-items: center;
 }
 
-@mixin imageCover($ht: 1px, $wd: 1px) {
+@mixin imageCover($wd: 1px, $ht: 1px) {
   height: $ht;
   width: $wd;
   object-fit: cover;
@@ -35,5 +35,11 @@
     size: cover;
     repeat: no-repeat;
     position: center center;
+  }
+}
+
+@mixin mediaQuery($width) {
+  @media screen and (max-width: $width){
+    @content;
   }
 }

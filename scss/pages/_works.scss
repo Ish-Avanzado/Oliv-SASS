@@ -1,0 +1,21 @@
+@use "../abstract/" as *;
+.work {
+    &__wrapper {
+        margin-bottom: 5rem;
+    }
+  &__title {
+    @include flexBetween;
+    margin-bottom: 2rem;
+    span {
+      text-transform: uppercase;
+    }
+    p {
+      padding: 0.2rem 1.6rem;
+      border: 1px solid $dark;
+      border-radius: 3rem;
+    }
+  }
+  img {
+    @include imageCover(100%, auto)
+  }
+}

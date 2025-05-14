@@ -6,6 +6,13 @@
     width: 100%;
     padding: 8rem 0;
     transform: translateX(6rem);
+    @include mediaQuery($mobile) {
+      transform: translateX(0rem);
+    }
+    span {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
     h1 {
       margin-bottom: 1rem;
     }
@@ -18,6 +25,14 @@
     margin-top: 5rem;
     margin-bottom: 3rem;
     @include grid(6);
+    @include mediaQuery($tablet) {
+      @include grid(3);
+      padding: 0;
+    }
+    @include mediaQuery($mobile) {
+      @include grid(1);
+      padding: 0;
+    }
     padding: 0 6rem;
     img {
       width: 100%;
@@ -28,6 +43,12 @@
 .hservices {
   &__wrapper {
     @include grid(4, 2rem);
+    @include mediaQuery($tablet) {
+      @include grid(2, 2rem);
+    }
+    @include mediaQuery($mobile) {
+      @include grid(1, 2rem);
+    }
   }
 
   &__card {
@@ -52,6 +73,9 @@
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    @include mediaQuery($mobile) {
+      @include grid(1, 2rem);
+    }
     gap: 3rem;
     img {
       width: 100%;
@@ -73,8 +97,24 @@
     grid-template-areas:
       "a b c ."
       ". d e f";
+    @include mediaQuery($tablet) {
+      grid-template-areas:
+        "a b"
+        "c d"
+        "e f";
+    }
+    @include mediaQuery($mobile) {
+      grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f";
+    }
     gap: 1rem;
     padding: 5rem 0;
+    max-width: 122rem;
   }
 
   &__card {
@@ -130,12 +170,19 @@
   &__content {
     max-width: 50%;
     margin: 10rem auto 0;
+
+    @include mediaQuery($tablet) {
+      max-width: 100%;
+    }
     h2 {
       font-size: 3rem;
     }
     p {
       columns: 2;
       gap: 2rem;
+      @include mediaQuery($tablet) {
+        columns: 1;
+      }
     }
   }
 }
@@ -143,33 +190,117 @@
 .hteam {
   &__wrapper {
     @include grid(4, 2rem);
+    @include mediaQuery($tablet) {
+      @include grid(2, 2rem);
+    }
+    @include mediaQuery($mobile) {
+      @include grid(1, 2rem);
+    }
+  }
+
+  &__description {
+    background: #f1f5f4;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: calc(100% - 36px);
+    @include mediaQuery($mobile) {
+      min-height: 30rem;
+    }
+    small {
+      text-transform: uppercase;
+    }
+    h3 {
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+    p {
+      margin-bottom: auto;
+    }
   }
   &__card {
     position: relative;
+    overflow: hidden;
     & > img {
       width: 100%;
     }
     &__content {
       @include flexBetween;
+      margin-top: 1rem;
+      span {
+        padding: 0.3rem 1.2rem;
+        border-radius: 3rem;
+        border: 1px solid $dark;
+        font-size: 1.2rem;
+      }
     }
     &__media {
       display: flex;
       gap: 1rem;
       position: absolute;
-      bottom: 4rem;
-      right: 3rem;
+      bottom: 8rem;
+      right: -19rem;
       z-index: 50;
+      transition: 0.5s ease;
       a {
         width: 4rem;
         height: 4rem;
         display: grid;
         place-content: center;
-        background-color: red;
+        background-color: $dark;
         border-radius: 50%;
       }
       img {
         width: 2.5rem;
         height: 2.5rem;
+      }
+    }
+    &:hover .hteam__card__media {
+      right: 4rem;
+    }
+  }
+}
+
+.testimonials {
+  padding: 16rem 0;
+  &__wrapper {
+    @include gridCustom(1fr 1fr 2fr, 2rem);
+    margin-bottom: 10rem;
+    @include mediaQuery($mobile) {
+      @include gridCustom(1fr, 2rem);
+      margin-bottom: 3rem;
+    }
+    h4 {
+      margin-bottom: 2rem;
+      
+    }
+  }
+}
+
+.hblog {
+  &__wrapper {
+    @include grid(4, 2rem);
+    @include mediaQuery($tablet) {
+      @include grid(2, 2rem);
+    }
+    @include mediaQuery($mobile) {
+      @include grid(1, 2rem);
+    }
+  }
+
+  &__card {
+    img {
+      @include imageCover(100%, auto);
+    }
+    p {
+      padding: 1rem 0;
+    }
+    a {
+      font-size: 1.4rem;
+      font-weight: bold;
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
