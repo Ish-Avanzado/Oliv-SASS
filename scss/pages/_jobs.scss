@@ -1,0 +1,35 @@
+@use "../abstract/" as *;
+
+.jobs {
+  &__wrapper {
+    @include flexBetween;
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid rgba($dark, $border-opacity);
+    @include mediaQuery($tablet) {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: start;
+    }
+  }
+  .info {
+    h3 {
+      margin-bottom: 2rem;
+    }
+    span {
+      padding: 0.5rem 1.4rem;
+      border: 1px solid $dark;
+      border-radius: 3rem;
+      margin-right: 1rem;
+    }
+  }
+  .details {
+    @include gridCustom(minmax(30rem,40rem) 1fr, 5rem);
+    align-items: center;
+    @include mediaQuery($mobile){
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+  }
+}

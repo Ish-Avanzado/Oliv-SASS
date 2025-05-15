@@ -1,0 +1,38 @@
+@use "../abstract/" as *;
+
+.shop {
+  margin: 15rem 0 5rem;
+  span {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  &__wrapper {
+    @include grid(3, 3rem);
+    @include mediaQuery($tablet) {
+        @include grid(2, 3rem);
+    }
+    @include mediaQuery($mobile) {
+        @include grid(1, 1rem);
+    }
+  }
+  &__card {
+    img {
+      @include imageCover(100%, auto);
+    }
+    span {
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
+    &__text {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+    }
+    h4 {
+        margin: 0;
+    }
+  }
+}

@@ -2,10 +2,10 @@
 
 .header {
   @include mediaQuery($mobile) {
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-  background: $light;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    background: $light;
   }
   &__wrapper {
     @include flexBetween;
@@ -23,9 +23,9 @@
   &__nav {
     @include mediaQuery($mobile) {
       position: absolute;
-      top: 6.5rem;
+      top: -100rem;
       transition: all 0.5s ease-in-out;
-      right: -100rem;
+      right: 0;
       background: $light;
       width: 100%;
       padding: 2rem;
@@ -52,12 +52,11 @@
   }
   &__nav.open {
     @include mediaQuery($mobile) {
-      right: 0;
+      top: 6.5rem;
       transition: all 0.5s ease-in-out;
       z-index: 9;
     }
   }
-
 }
 
 .toggle_menu {

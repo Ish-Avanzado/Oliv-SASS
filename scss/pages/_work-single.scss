@@ -1,0 +1,94 @@
+@use "../abstract/" as *;
+
+.wshero {
+  margin-top: 15rem;
+  @include mediaQuery($mobile) {
+    margin-top: 5rem;
+  }
+  h1 {
+    text-wrap: balance;
+  }
+  &__information {
+    @include grid(4, 2rem);
+    @include mediaQuery($tablet) {
+      @include grid(2, 2rem);
+    }
+    @include mediaQuery($mobile) {
+      @include grid(1, 2rem);
+    }
+    &__item {
+      span {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        display: block;
+        border-bottom: 1px solid rgba($gray, $border-opacity);
+      }
+      h3 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.comments {
+  &__wrapper {
+    max-width: 75%;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 30rem 1fr;
+    @include mediaQuery($tablet) {
+      max-width: 100%;
+    }
+    @include mediaQuery($mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__main {
+    margin-bottom: 2rem;
+    h4 {
+      margin-bottom: 2rem;
+      font-size: 3rem;
+    }
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.process {
+  margin: 5rem 0;
+  &__wrapper {
+    @include grid(3, 5rem);
+    @include mediaQuery($tablet) {
+        @include grid(2, 5rem);
+      }
+    @include mediaQuery($mobile) {
+        @include grid(1, 5rem);
+      }
+  }
+  &__card {
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 40.6rem;
+    padding: 5rem;
+    span {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+    h3 {
+      font-size: 2.3rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.work__screenshots {
+  img {
+    @include imageCover(100%, auto);
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,70 @@
+@use "../abstract/" as *;
+
+.bhero {
+  &__wrapper {
+    @include grid(2, 5rem);
+    margin: 5rem 0;
+    @include mediaQuery($tablet) {
+      @include grid(1, 2rem);
+    }
+  }
+  &__image img {
+    @include imageCover(100%, auto);
+  }
+
+  &__content {
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    span {
+      text-transform: uppercase;
+      font-size: 1.4rem;
+    }
+    h1 {
+      font-size: 5rem;
+      text-wrap: balance;
+    }
+    p {
+      margin-bottom: auto;
+      @include mediaQuery($tablet) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
+
+.posts {
+  margin-bottom: 10rem;
+  &__wrapper {
+    margin-top: 5rem;
+    @include grid(3, 2rem);
+    @include mediaQuery($tablet) {
+      @include grid(2, 2rem);
+    }
+    @include mediaQuery($mobile) {
+      @include grid(1, 2rem);
+    }
+  }
+
+  &__card {
+    img {
+      @include imageCover(100%, auto);
+    }
+    &-content {
+      @include flexBetween;
+      padding: 2rem 0;
+      h4 {
+        font-size: 1.6rem;
+        max-width: 70%;
+        margin-bottom: 0;
+      }
+      span {
+        padding: 0.5rem 1.2rem;
+        border: 1px solid $dark;
+        border-radius: 3rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
