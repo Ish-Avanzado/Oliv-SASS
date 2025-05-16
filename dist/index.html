@@ -2,9 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="Oliv is a Design Studio that develop branding, website, and product design...">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/main.min.css" />
+    <link
+      rel="preload"
+      href="./fonts/Manrope-Light.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/Manrope-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/Manrope-SemiBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
   </head>
   <body>
     <header class="header">
@@ -12,7 +34,7 @@
         <div class="header__wrapper">
           <div class="header__branding">
             <a href="/" class="header__logo"
-              ><img src="./images/logo.JPG" alt=""
+              ><img src="./images/logo.webp" alt="oliv-logo" width="30" height="20"
             /></a>
             <span>We are hiring!</span>
           </div>
@@ -27,9 +49,7 @@
             </ul>
           </nav>
 
-          <button class="toggle_menu">
-            Menu
-          </button>
+          <button class="toggle_menu">Menu</button>
         </div>
       </div>
     </header>
@@ -46,12 +66,12 @@
             <a href="#" class="btn btn-dark">Our Services</a>
           </div>
           <div class="hero__logos">
-            <img src="http://placehold.co/300x75" alt="" />
-            <img src="http://placehold.co/300x75" alt="" />
-            <img src="http://placehold.co/300x75" alt="" />
-            <img src="http://placehold.co/300x75" alt="" />
-            <img src="http://placehold.co/300x75" alt="" />
-            <img src="http://placehold.co/300x75" alt="" />
+            <img src="./images/ticker-1.jpg" alt="logo-1" width="118" height="50" />
+            <img src="./images/ticker-2.jpg" alt="logo-2" width="170" height="51" />
+            <img src="./images/ticker-3.jpg" alt="logo-3" width="98" height="40" />
+            <img src="./images/ticker-4.jpg" alt="logo-4" width="185" height="35" />
+            <img src="./images/ticker-5.jpg" alt="logo-5" width="149" height="57" />
+            <img src="./images/ticker-6.jpg" alt="logo-6" width="71" height="44" />
           </div>
         </div>
       </section>
@@ -109,28 +129,52 @@
 
           <div class="hwork__wrapper">
             <div class="hwork__card">
-              <img src="https://placehold.co/780x560" alt="" />
+              <img
+                src="./images/project-1.webp"
+                alt="project-1"
+                width="644"
+                height="464"
+                loading="lazy"
+              />
               <div class="hwork__card__content">
                 <h4>Branding</h4>
                 <a href="#" class="btn btn-light">Marketing</a>
               </div>
             </div>
             <div class="hwork__card">
-              <img src="https://placehold.co/780x560" alt="" />
+              <img
+                src="./images/project-2.webp"
+                alt="project-2"
+                width="644"
+                height="464"
+                loading="lazy"
+              />
               <div class="hwork__card__content">
                 <h4>Branding</h4>
                 <a href="#" class="btn btn-light">Marketing</a>
               </div>
             </div>
             <div class="hwork__card">
-              <img src="https://placehold.co/780x560" alt="" />
+              <img
+                src="./images/project-3.webp"
+                alt="project-3"
+                width="644"
+                height="464"
+                loading="lazy"
+              />
               <div class="hwork__card__content">
                 <h4>Branding</h4>
                 <a href="#" class="btn btn-light">Marketing</a>
               </div>
             </div>
             <div class="hwork__card">
-              <img src="https://placehold.co/780x560" alt="" />
+              <img
+                src="./images/project-4.webp"
+                alt="project-4"
+                width="644"
+                height="464"
+                loading="lazy"
+              />
               <div class="hwork__card__content">
                 <h4>Branding</h4>
                 <a href="#" class="btn btn-light">Marketing</a>
@@ -151,8 +195,23 @@
               </div>
 
               <a href="#" class="btn btn-dark"
-                >About <img src="./images/arrow-up-right.svg" alt=""
-              /></a>
+                >About
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"
+                >
+                  <path d="M7 7h10v10" />
+                  <path d="M7 17 17 7" />
+                </svg>
+              </a>
             </div>
 
             <div class="value__card">
@@ -221,11 +280,11 @@
               <a href="#" class="btn btn-dark">Apply Now</a>
             </div>
             <div class="hteam__card">
-              <img src="https://placehold.co/380x540" alt="" />
+              <img src="./images/team-1.webp" alt="team-1" width="315" height="450" loading="lazy"/>
               <div class="hteam__card__media">
-                <a href="#"><img src="https://placehold.co/10x10" alt="" /></a>
-                <a href="#"><img src="https://placehold.co/10x10" alt="" /></a>
-                <a href="#"><img src="https://placehold.co/10x10" alt="" /></a>
+                <a href="#"><img src="./images/icon-facebook.svg" alt="" /></a>
+                <a href="#"><img src="./images/icon-instagram.svg" alt="" /></a>
+                <a href="#"><img src="./images/icon-twitter.svg" alt="" /></a>
               </div>
               <div class="hteam__card__content">
                 <p>Annettle Black</p>
@@ -234,11 +293,11 @@
             </div>
 
             <div class="hteam__card">
-              <img src="https://placehold.co/380x540" alt="" />
+              <img src="./images/team-2.webp" alt="team-2" width="315" height="450" loading="lazy"/>
               <div class="hteam__card__media">
-                <a href="#"><img src="https://placehold.co/10x10" alt="" /></a>
-                <a href="#"><img src="https://placehold.co/10x10" alt="" /></a>
-                <a href="#"><img src="https://placehold.co/10x10" alt="" /></a>
+                <a href="#"><img src="./images/icon-facebook.svg" alt="" /></a>
+                <a href="#"><img src="./images/icon-instagram.svg" alt="" /></a>
+                <a href="#"><img src="./images/icon-twitter.svg" alt="" /></a>
               </div>
               <div class="hteam__card__content">
                 <p>Annettle Black</p>
@@ -247,11 +306,11 @@
             </div>
 
             <div class="hteam__card">
-              <img src="https://placehold.co/380x540" alt="" />
+              <img src="./images/team-3.webp" alt="team-3" width="315" height="450" loading="lazy"/>
               <div class="hteam__card__media">
-                <a href="#"><img src="https://placehold.co/10x10" alt="" /></a>
-                <a href="#"><img src="https://placehold.co/10x10" alt="" /></a>
-                <a href="#"><img src="https://placehold.co/10x10" alt="" /></a>
+                <a href="#"><img src="./images/icon-facebook.svg" alt="" /></a>
+                <a href="#"><img src="./images/icon-instagram.svg" alt="" /></a>
+                <a href="#"><img src="./images/icon-twitter.svg" alt="" /></a>
               </div>
               <div class="hteam__card__content">
                 <p>Annettle Black</p>
@@ -267,7 +326,7 @@
           <div class="testimonials__wrapper">
             <div></div>
 
-            <img src="https://placehold.co/120x70" alt="" />
+            <img src="./images/ticker-1.jpg" alt="logo-1" width="98" height="40" loading="lazy"/>
             <div>
               <h4>
                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -290,7 +349,7 @@
           <div class="testimonials__wrapper">
             <div></div>
 
-            <img src="https://placehold.co/120x70" alt="" />
+            <img src="./images/ticker-3.jpg" alt="logo-3" width="118" height="50" loading="lazy"/>
             <div>
               <h4>“Lorem ipsum dolor sit amet, consectetur”</h4>
               <p>
@@ -321,8 +380,23 @@
                 consultation today.
               </p>
               <a href="#" class="btn btn-dark"
-                >Get in Touch <img src="http://placehold.co/10x10" alt=""
-              /></a>
+                >Get in Touch
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"
+                >
+                  <path d="M7 7h10v10" />
+                  <path d="M7 17 17 7" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -339,25 +413,25 @@
 
           <div class="hblog__wrapper">
             <div class="hblog__card">
-              <img src="https://placehold.co/380x380" alt="" />
+              <img src="./images/blog-1.webp" alt="blog-1" width="314" height="314" loading="lazy"/>
               <p>The Importance of a Strong Brand Positioning</p>
               <a href="#">Read More</a>
             </div>
 
             <div class="hblog__card">
-              <img src="https://placehold.co/380x380" alt="" />
+              <img src="./images/blog-2.webp" alt="blog-2" width="314" height="314" loading="lazy"/>
               <p>The Importance of a Strong Brand Positioning</p>
               <a href="#">Read More</a>
             </div>
 
             <div class="hblog__card">
-              <img src="https://placehold.co/380x380" alt="" />
+              <img src="./images/blog-3.webp" alt="blog-3" width="314" height="314" loading="lazy"/>
               <p>The Importance of a Strong Brand Positioning</p>
               <a href="#">Read More</a>
             </div>
 
             <div class="hblog__card">
-              <img src="https://placehold.co/380x380" alt="" />
+              <img src="./images/blog-4.webp" alt="blog-4" width="314" height="314" loading="lazy" />
               <p>The Importance of a Strong Brand Positioning</p>
               <a href="#">Read More</a>
             </div>
@@ -371,7 +445,7 @@
         <div class="footer__wrapper">
           <div class="footer__box">
             <div class="footer__logo">
-              <img src="./images/logo.JPG" alt="" />
+              <img src="./images/logo.webp" alt="oliv-logo" width="30" height="20" loading="lazy"/>
               <h3>oliv</h3>
             </div>
           </div>

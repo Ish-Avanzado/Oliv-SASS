@@ -39,7 +39,13 @@
 }
 
 @mixin mediaQuery($width) {
-  @media screen and (max-width: $width){
+  @media screen and (max-width: $width) {
     @content;
   }
+}
+
+@mixin borderBottom($wd: 1px, $color: red, $style: solid) {
+  border-width: $wd;
+  border-color: $color;
+  border-style: $style;
 }
